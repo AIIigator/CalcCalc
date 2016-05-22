@@ -30,29 +30,29 @@ public class PolyTerm extends Term
     }
     
     public PolyTerm(String s) throws IllegalArgumentException {
-        System.out.println(s+" here is what it looks like");
+        System.out.println(s + " here is what it looks like");
         
         int brackets = 0;
         int whereWeAt = 0; 
         String innerString="";
-        for(int i=0;i<s.length();i++){
-        	char c=s.charAt(i);
-        	if(c =='('){
+        for(int i=0; i < s.length(); i++){
+        	char c = s.charAt(i);
+        	if( c == '(' ){
         		brackets++;
-        		innerFunction=true;
-        		if(brackets==1){
-        			whereWeAt=i;
+        		innerFunction = true;
+        		if(brackets == 1){
+        			whereWeAt = i;
         		}
         	}
-        	if(c == ')'){
+        	if( c == ')' ){
         		brackets--;
-        		if(brackets==0){
-        			innerString=s.substring(whereWeAt+1,i);
+        		if(brackets == 0){
+        			innerString = s.substring(whereWeAt+1,i);
         		}
         	}
         }
         if(innerFunction){
-        	inner = new Function (innerString);
+        	inner = new Function(innerString);
         	System.out.println(innerString);
         }
         
@@ -132,7 +132,7 @@ public class PolyTerm extends Term
         if(coeff != 0 && coeff != 1) {
             ans += coeff;
         } else if(coeff == 1) {
-            ans = ans;
+            //ans = ans;
         } else {
             return "0";
         }

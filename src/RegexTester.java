@@ -1,6 +1,6 @@
 import java.io.Console;
 import java.util.*;
-import java.util.regex.*;
+// import java.util.regex.*;
 
 public class RegexTester {
 
