@@ -10,6 +10,7 @@ public class MulTerm
 {
     private ArrayList<Term> terms;
     protected double coeff;
+    private Function [] rayFunc;  
     
     public double getCoeff() {
         return coeff;
@@ -40,6 +41,11 @@ public class MulTerm
     public MulTerm(ArrayList<Term> ls) {
         terms = ls;
     }
+    
+    /*public MulTerm(Function [] f){
+    	rayFunc=f; 
+    }*/
+    
     
     public String toString() {
         String ans = "";
