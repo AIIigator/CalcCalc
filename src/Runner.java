@@ -33,7 +33,7 @@ public class Runner
             //System.out.println("Yeah something went wrong, idk what to tell you");
             //System.out.println("Maybe you just typed something that wasn't a function?");
             //System.out.println("Or my code just sucks... this one seems most likely");
-            System.out.println(e.getStackTrace());
+            //System.out.println(e.getStackTrace());
         } finally {
         	sc.close();
         }

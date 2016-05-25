@@ -30,7 +30,7 @@ public class PolyTerm extends Term
     }
     
     public PolyTerm(String s) throws IllegalArgumentException {
-        System.out.println(s + " here is what it looks like");
+        //System.out.println(s + " here is what it looks like");
         
         int brackets = 0;
         int whereWeAt = 0; 
@@ -52,8 +52,11 @@ public class PolyTerm extends Term
         	}
         }
         if(innerFunction){
-        	inner = new Function(innerString);
-        	System.out.println(innerString);
+        	//inner = new Function(innerString);
+        	//System.out.println(innerString);
+        	System.out.println("sorry, my program can't do chain rule yet.");
+        	System.out.println("Please wait for version 2 which will inclue chain rule.");
+        	throw new IllegalArgumentException();
         }
         
         int dex = 0;
@@ -77,18 +80,31 @@ public class PolyTerm extends Term
         } else {
             try {
                 coeff = Double.parseDouble(s.substring(0,dex));
+                //System.out.println(coeff+" this is the coeff");
             } catch (NumberFormatException e) {
                 throw new IllegalArgumentException();
             }
         }
-        
-        dex = s.indexOf("^");
+        String test="";
+        if(!innerFunction){
+            dex = s.lastIndexOf("^");
+        } else {
+        	test=s.substring(s.indexOf(")")+1,s.length());
+        	System.out.println(test+" test string");
+        	dex=test.indexOf("^");
+        	//dex=s.indexOf("^");
+        }
         
         if(dex < 0) {
             exp = 1;
         } else {
             try {
+            	if(!innerFunction){
+            	//System.out.println(s.substring(dex+1,s.length())+" this is where exp is");
                 exp = Double.parseDouble(s.substring(dex+1,s.length()));
+            	} else {
+            		exp = Double.parseDouble(test.substring(dex+1,test.length()));
+            	}
             } catch (NumberFormatException e) {
                 throw new IllegalArgumentException();
             }
