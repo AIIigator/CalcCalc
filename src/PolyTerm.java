@@ -54,8 +54,8 @@ public class PolyTerm extends Term
         if(innerFunction){
         	//inner = new Function(innerString);
         	//System.out.println(innerString);
-        	System.out.println("sorry, my program can't do chain rule yet.");
-        	System.out.println("Please wait for version 2 which will inclue chain rule.");
+        	System.out.println("Sorry, my program can't do chain rule yet.");
+        	System.out.println("Please wait for version 2 which will include chain rule.");
         	throw new IllegalArgumentException();
         }
         

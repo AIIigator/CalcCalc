@@ -30,9 +30,9 @@ public class Runner
         } catch (IntegrationException e) {
             System.out.println("That's too hard for this program to integrate");
         } catch (Exception e) {
-            //System.out.println("Yeah something went wrong, idk what to tell you");
-            //System.out.println("Maybe you just typed something that wasn't a function?");
-            //System.out.println("Or my code just sucks... this one seems most likely");
+            System.out.println("Yeah something went wrong, idk what to tell you");
+            System.out.println("Maybe you just typed something that wasn't a function?");
+            System.out.println("Or my code just sucks... this one seems most likely");
             //System.out.println(e.getStackTrace());
         } finally {
         	sc.close();
